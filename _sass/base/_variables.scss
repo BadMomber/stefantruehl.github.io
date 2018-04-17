@@ -24,7 +24,7 @@ $border-color: rgba(0, 0, 0, 0.1); // rgba recommended if using feature images
 
 // Typography colours
 $text-color: #383838;
-$link-color: #F6DC13; // Template default: #1ABC9C;
+$link-color: #000; // Template default: #1ABC9C;
 $selection-color: #D4D4D4; // visible when highlighting text
 
 // Tags color
@@ -43,4 +43,4 @@ $feature-image-size: cover; // options include "cover", "contain", "auto"
 // Header description box
 $header-desc-background-color: #F6DC13; // Template default: #1ABC9C;
 $header-desc-text-color: #FFF;
-$header-desc-link-color: #F6DC13; // Template default: #02453D;
+$header-desc-link-color: #000; // Template default: #02453D;
