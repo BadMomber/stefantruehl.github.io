@@ -2,15 +2,31 @@
 layout: post
 title: Zsh is awesome!
 feature-img: "assets/img/sample_feature_img.png"
-tags: [test, sample]
+tags: [how-to]
 ---
 
-some general introductive words
+
+Many Linux distributions bring along [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) as the standard shell. Thus, I have been using it for years. 
+However, a couple of month ago I was made aware of [Z shell (Zsh)](http://www.zsh.org/) and have been using ever it since on a daily basis. In this time, I have come to love it and enjoy working with it. Thus, I want to outline some of my key findings and learnings in this post.  
 
 ### Zsh
+Compared to Bash Zsh offers a wide variate of different advantages. Those that I have learned to appreciate most are the following:
+
+##### Ease of Use
+Zsh is much more powerful than Bash when it comes to tab completion. Just as an example see 
+
+##### Customizability 
+Themes and Plugins
+
 
 #### Install Zsh
-Obviously, howto install Zsh is quite specific for you OS. During playing around with Zsh I have come across a nice [installation guide](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) you may want to review.
+Obviously, how to install Zsh is quite specific for you OS. During playing around with Zsh I have come across a nice [installation guide](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) you may want to review.
+
+If you want to make Zsh your default shell you only need to execute the following command:
+> chsh -s /bin/zsh
+
+
+
 
 
 ### Prezto — "Instantly Awesome Zsh"
@@ -69,4 +85,8 @@ In my case it was rather simple as I had a vanilla installations of Zsh (running
 
 ### Oh My Zsh - "Your terminal never felt this good before"
 http://ohmyz.sh/
+
+
+
+http://vincenzo-do.ch/?p=64
 
