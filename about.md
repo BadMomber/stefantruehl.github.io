@@ -5,8 +5,17 @@ permalink: /about/
 feature-img: "assets/img/finisterre.png"
 ---
 
-Type Theme is a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+You are lookging at my private website. 
+Its primary purpose is to serve as a dumping ground for random thoughts that are probably not of use to anyone.
 
-Head over to the [theme's documentation](https://rohanchandra.github.io/project/type/) for much more information about Type Theme or to install this theme on your own Jekyll site.
+I am Stefan, currently employed as a visiting professor at the [University of Applied Sciences Darmstadt's](https://h-da.de/) [Computer Science Department](https://www.fbi.h-da.de/~s.ruehl/)  
+This occupation allows me to pass on my deep passion for software engineering, IT technology, and computer science in general. 
 
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+
+## Contact
+If you want to get in touch with me, send me an <a href="mailto:{{ site.email }}">email</a>.
+
+## Disclaimer
+The opinions expressed herein are my own personal opinions and do not reflect my employer's view in any way.
+
+This <a href="/">website</a> is not responsible for externally hosted material, including linked articles, photos or any other media.
