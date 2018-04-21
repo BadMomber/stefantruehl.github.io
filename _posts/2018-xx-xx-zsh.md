@@ -41,20 +41,20 @@ So far I have tested two configuration framework for Zsh **Prezto** and **Oh My 
 I have used it for some time and enjoyed it. You may want to give it a shot and try it out. 
 
 
-#### Install Prezto
+### Install Prezto
 
 You will find a description on how to install Prezto on the project's [GitHub page](https://github.com/sorin-ionescu/prezto). I strongly suggest to stick to this how to. 
 
 In my case it was rather simple as I had a vanilla installations of Zsh (running on my Fedora 27 installation). So I simply executed the following steps: 
   1. Launch Zsh:
 
-     ```console
+     ```sh
      zsh
      ```
 
   2. Clone the repository:
 
-     ```console
+     ```sh
      git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
      ```
 
@@ -70,14 +70,15 @@ In my case it was rather simple as I had a vanilla installations of Zsh (running
 
   4. Set Zsh as your default shell:
 
-     ```console
+     ```sh
      chsh -s /bin/zsh
      ```
 
   5. Open a new Zsh terminal window or tab.
 
 
-#### Uninstall Pretzo 
+### Uninstall Pretzo 
+At some point I wanted to change to another configuration framework. Thus, I had to uninstall Pretzo. This is what I did to do so. 
 
   1. Remove all the related .z* files and directories in $HOME directory. Im my case these were the directories: 
   - .zprezto
@@ -86,34 +87,79 @@ In my case it was rather simple as I had a vanilla installations of Zsh (running
     and files: .zcompdump, .zcompdump.zwc, .zhistory, .zlogin, .zlogout, .zpreztorc, .zprofile, .zshenv, .zshrc. You might want to keep some of them, e.g. hold on to your history.
 
   2. Change your default shell back to Bash (adjust to your default shell)
-     ```console
+     ```sh
      chsh -s /bin/bash 
      ```
      
 
 
-### Oh My Zsh - "Your terminal never felt this good before"
-http://ohmyz.sh/
+## Oh My Zsh - "Your terminal never felt this good before"
+[Oh My Zsh](http://ohmyz.sh/) is the configuration framework that I am currently using. According to the project's website, they offer more than 200 plugins and more than 120 themes. For more infos review the following:
+- [Overview of themes](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)
+- [Overview of plugins](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins-Overview)
 
 
+### Install Installing Oh My Zsh 
+Instructions on how to install Oh My Zsh can be found on the [GitHub page of the project](https://github.com/robbyrussell/oh-my-zsh). 
+I chose the installation via curl which is a single command:
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
-http://vincenzo-do.ch/?p=64
 
+### My current Configurations
+The following are some configurations that I made.
 
-
-https://stackoverflow.com/questions/28491458/zsh-agnoster-theme-showing-machine-name
-
-> ZSH_THEME="agnoster"
-> DEFAULT_USER="$USER"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+#### Plugins 
+Activating plugins is quite easy. You only need to edit the *.zshrc* configuration file and add the plugins' names at the right spot. 
+I am still in the trying-out phase. At the moment those are the ones I am using (snipet from .zshrc): 
+```sh
 plugins=(
   git
   svn-fast-info
   docker
   sudo
+  dnf
 )
+```
+Well, from the names it should be obvious what the plugins are about, *git* adds awesome support for git, etc. 
+However, there is one that I want to point out specifically: **sudo**. This plugin adds *sudo* in front of a console line once you hit the escape key twice. This is awesome because is significantly increases productivity. 
 
+#### Theme
+After browsing the available themes for some time I chose **agnoster** as my favorit theme. 
+
+##### Step 1: Adjust .zshrc
+
+Using it can simply be done by changing the chosen theme in the *.zshrc* configuration file in the following way: 
+```sh
+ZSH_THEME="agnoster"
+```
+
+##### Step 2: Install Powerline Fonts
+The Agnoster theme relies on the [Powerline Fonts](https://github.com/powerline/fonts). They need to be installed on your system. 
+
+In my case, using Fedora I installed in the following way: 
+```sh
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+```
+
+##### Step 3: Make your Terminal Emulator use a Powerline Font
+After installation, you need to make your terminal emulator use a powerline font. I use [Terminator](https://launchpad.net/terminator) as terminal emulator. If you too, open the preference menu (right-click -> Preferences). Under Profiles you should find the General tab with the possibility to change the font. 
+
+![Choose powerline font in your terminal window]({{ site.baseurl }}/assets/img/post-zsh/AgnosterTheme-ChooseFont.png)
+
+
+
+##### Step 4: Get rid of *UserName@MachineName
+At this point I still had **sruehl@stefansX1C6** in front of the command prompt. In order to get rid of it, I added the following line to the *.zshrc* configuration file:
+
+```sh
+DEFAULT_USER="$USER"
+```
