@@ -2,6 +2,7 @@
 layout: post
 title: Sample Post - Tech Demo
 feature-img: "assets/img/sample_feature_img.png"
+published: false
 tags: [test, sample]
 ---
 
