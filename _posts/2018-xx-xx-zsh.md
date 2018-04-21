@@ -17,24 +17,29 @@ Compared to Bash Zsh offers a wide variate of different advantages. Those that I
 #### Ease of Use
 Zsh is much more powerful than Bash when it comes to tab completion. A simple but power example is the fact that it will tab complete names (e.g. folder or file names) case insensitively. Even further, it will even tab complete, in fact tab correct typos. 
 
-Another great example for the awesome usability is the menu Zsh will give you if tab completion is not conclusive. In this menu you will be able to select the right item using cursor keys. 
+Another great example for the awesome usability is the menu Zsh will give you if tab completion is not conclusive. In this menu you will be able to select the right item using cursor keys. Illustrated by the figure above. 
 
 #### Customizability 
-Themes and Plugins
+Zsh offers great ability to be customized and extended. There is a wide variate of different plugins available that make tab completion even more powerful, for example by introducing completion for application parameters. Illustrated by figure above.
+Another awesome ability its theming. Zsh give great opportunity to be adjusted to your personal taste. The figure above illustrates the Agnoster theme, which comes along with Oh My Zsh. 
 
 
-#### Install Zsh
+### Install Zsh
 Obviously, how to install Zsh is quite specific for you OS. During playing around with Zsh I have come across a nice [installation guide](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) you may want to review.
 
 If you want to make Zsh your default shell you only need to execute the following command:
 > chsh -s /bin/zsh
 
 
+Even though Zsh offers great extensibility and customizability, I don't want to spend the time of doing it myself, instead I use available resources that are available. 
+So far I have tested two configuration framework for Zsh **Prezto** and **Oh My Zsh**. The following is a brief introduction.
 
 
+## Prezto — "Instantly Awesome Zsh"
+[Prezto](https://github.com/sorin-ionescu/prezto) is a nice configuration framework for Zsh. It enriches the shell with a variety of different defaults, aliases, functions, auto completion, and prompt themes.
 
-### Prezto — "Instantly Awesome Zsh"
-https://github.com/sorin-ionescu/prezto
+I have used it for some time and enjoyed it. You may want to give it a shot and try it out. 
+
 
 #### Install Prezto
 
