@@ -9,13 +9,13 @@ tags: [how-to]
 Many Linux distributions bring along [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) as their standard shell. Thus, I have been using it for years. 
 However, a couple of months ago I was made aware of [Z shell (Zsh)](http://www.zsh.org/) and have been using ever it since on a daily basis. In this time, I have come to love it and enjoy working with it. Thus, I want to outline some of my key findings and learnings in this post.  
 
-### Zsh
+## Zsh
 Compared to Bash Zsh offers a wide variate of different advantages. Those that I have learned to appreciate most are the following:
 
-##### Ease of Use
+#### Ease of Use
 Zsh is much more powerful than Bash when it comes to tab completion. Just as an example see 
 
-##### Customizability 
+#### Customizability 
 Themes and Plugins
 
 
@@ -74,7 +74,7 @@ In my case it was rather simple as I had a vanilla installations of Zsh (running
   - .zprezto
   - .zcompcache
 
-    and files: .zcompdump, .zcompdump.zwc, .zhistory, .zlogin, .zlogout, .zpreztorc, .zprofile, .zshenv, .zshrc. You might want to keep some of them, e.g. got hold on to your history.
+    and files: .zcompdump, .zcompdump.zwc, .zhistory, .zlogin, .zlogout, .zpreztorc, .zprofile, .zshenv, .zshrc. You might want to keep some of them, e.g. hold on to your history.
 
   2. Change your default shell back to Bash (adjust to your default shell)
      ```console
