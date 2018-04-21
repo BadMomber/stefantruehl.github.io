@@ -1,19 +1,23 @@
 ---
 layout: post
 title: Zsh is awesome!
-feature-img: "assets/img/sample_feature_img.png"
-tags: [how-to]
+feature-img: "assets/img/post-zsh/OhMyZsh-AgnosterTheme.png"
+tags: [how-to, Linux]
 ---
 
 
 Many Linux distributions bring along [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) as their standard shell. Thus, I have been using it for years. 
 However, a couple of months ago I was made aware of [Z shell (Zsh)](http://www.zsh.org/) and have been using ever it since on a daily basis. In this time, I have come to love it and enjoy working with it. Thus, I want to outline some of my key findings and learnings in this post.  
 
+![Zsh with Oh my Zsh extenstion and Agnoster theme]({{ site.baseurl }}/assets/img/post-zsh/OhMyZsh-AgnosterTheme.png)
+
 ## Zsh
 Compared to Bash Zsh offers a wide variate of different advantages. Those that I have learned to appreciate most are the following:
 
 #### Ease of Use
-Zsh is much more powerful than Bash when it comes to tab completion. Just as an example see 
+Zsh is much more powerful than Bash when it comes to tab completion. A simple but power example is the fact that it will tab complete names (e.g. folder or file names) case insensitively. Even further, it will even tab complete, in fact tab correct typos. 
+
+Another great example for the awesome usability is the menu Zsh will give you if tab completion is not conclusive. In this menu you will be able to select the right item using cursor keys. 
 
 #### Customizability 
 Themes and Plugins
