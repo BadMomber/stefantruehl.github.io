@@ -6,8 +6,8 @@ tags: [how-to]
 ---
 
 
-Many Linux distributions bring along [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) as the standard shell. Thus, I have been using it for years. 
-However, a couple of month ago I was made aware of [Z shell (Zsh)](http://www.zsh.org/) and have been using ever it since on a daily basis. In this time, I have come to love it and enjoy working with it. Thus, I want to outline some of my key findings and learnings in this post.  
+Many Linux distributions bring along [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) as their standard shell. Thus, I have been using it for years. 
+However, a couple of months ago I was made aware of [Z shell (Zsh)](http://www.zsh.org/) and have been using ever it since on a daily basis. In this time, I have come to love it and enjoy working with it. Thus, I want to outline some of my key findings and learnings in this post.  
 
 ### Zsh
 Compared to Bash Zsh offers a wide variate of different advantages. Those that I have learned to appreciate most are the following:
