@@ -85,11 +85,65 @@ At this point you are probably all set and can create LaTeX documents with your 
 
 
 ## Step 4: Verify everything is set up properly
+In order to verify, that everything is set up properly, I recommend using the [research proposal template](https://github.com/stefantruehl/research-proposal-template) that I host on my GitHub account. 
+
+#### Step 1: Clone the repo on to your local machine
+Use the git client of your choosing to clone the repo locally.
+Using the console client, the command is:
+```sh
+git clone git@github.com:stefantruehl/research-proposal-template.git
+```
+
+#### Step 2: Open the *researchproposal.tex*-file with VS Code
+Follow these steps: 
+1. Open VS Code
+2. Open Folder ("File"->"Open Folder"), browse to the location where you cloned the repo. 
+3. In the explorer section of VS Code's UI open the *researchproposal.tex*-file
 
 
-Setup LaTeX Tool Chain for PDF Creation
+#### Step 3: Setup proper LaTeX Tool Chain
 
-As an example try to us the [research proposal template](https://github.com/stefantruehl/research-proposal-template) that I host on my GitHub. 
+"File"->"Preferences"->"Settings"
+
+````json
+"latex-workshop.latex.toolchain": [
+  {
+    "command": "pdflatex",
+    "args": [
+      "-synctex=1",
+      "-interaction=nonstopmode",
+      "-file-line-error",
+      "%DOC%"
+    ]
+  }, {
+    "command": "bibtex",
+    "args": [
+      "%DOCFILE%"
+    ]
+  }, {
+    "command": "pdflatex",
+    "args": [
+      "-synctex=1",
+      "-interaction=nonstopmode",
+      "-file-line-error",
+      "%DOC%"
+    ]
+  }, {
+    "command": "pdflatex",
+    "args": [
+      "-synctex=1",
+      "-interaction=nonstopmode",
+      "-file-line-error",
+      "%DOC%"
+    ]
+  }
+]
+````
+
+
+#### Step 4: Build pdf-file
+
+
 
 
 ## Final Step: Basic Usage and make sure it works
