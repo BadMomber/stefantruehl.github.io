@@ -5,8 +5,6 @@ feature-img: "assets/img/sample_feature_img.png"
 tags: [howto]
 ---
 
-
-
 Very frequently, I am in contact with students that want to use LaTex for the creation of there academic papers or (bachelor or master) theses and struggle with the setup of a working LaTeX environment. Thus, I want to use this article to give an introduction to the LaTeX environment that I use personally. This article covers the setup of the following tool chain:
 - **TeX Live** ([link](https://www.tug.org/texlive/ )) - very popular LaTeX distribution that brings along a huge number of LaTeX
 - **Visual Studio Code** (aka VS Code - [link](https://code.visualstudio.com/)) - rather lightweight but very powerful IDE that brings great extendability for a vast variate of different languages. 
@@ -63,32 +61,35 @@ As an example, for Fedora 27, the full installation package is called *texlive-s
 
 
 ## Step 2: Install Visual Studio Code
+[Visual Studio Code](https://code.visualstudio.com/) is a light weight IDE developed by Microsoft that is [open source](https://github.com/Microsoft/vscode). It offers great ability to be extended with new functionality though a extension system. Still it remains easy to use and lean. 
 
-
-[Visual Studio Code](https://code.visualstudio.com/) is a light weight code IDE developed by Microsoft that is [open source](https://github.com/Microsoft/vscode) 
-
-[Visual Studio Code](https://en.wikipedia.org/wiki/Visual_Studio_Code "Wikipedia on VSCode")
-
-Installation guilds can be founs here: 
+Operating system specific installation guides can be found here: 
 - [Linux](https://code.visualstudio.com/docs/setup/linux)
 - [Windows](https://code.visualstudio.com/docs/setup/windows)
 - [MacOS](https://code.visualstudio.com/docs/setup/mac)
 
+If you want to get familiar with VS Code, the following will give you an introduction on basic editing: [link](https://code.visualstudio.com/docs/editor/codebasics).
 
 
 
+## Step 3: Install the VS Code extension: "LaTeX Workshop"
+In order to be able to edit LaTeX with VS Code, you need to install an extension. The one I use and recommend is called [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop "LaTeX Workshop - Visual Studio Marketplace").
 
-## Step 3: Install the VS Code extension "LaTeX Workshop"
+On all operating systems, it is installed by simply: 
+1. launch VS Code Quick Open (ctrl/cmd + P)
+2. paste the following command: "ext install James-Yu.latex-workshop"
+3. hit enter
+4. after the installation, it is most probably necessary to restart VS Code
+
+At this point you are probably all set and can create LaTeX documents with your machine. However, if you want to verify that everything is set up properly, you may want to execute the following step es well. 
 
 
+## Step 4: Verify everything is set up properly
 
 
-## Step 4: Setup Tool Chain
-3. Install the VS Code Extension called [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop "LaTeX Workshop - Visual Studio Marketplace")
+Setup LaTeX Tool Chain for PDF Creation
 
+As an example try to us the [research proposal template](https://github.com/stefantruehl/research-proposal-template) that I host on my GitHub. 
 
-
-Make sure you have a LaTeX distribution installed 
-Install Visual Studio Code on your System https://code.visualstudio.com/
 
 ## Final Step: Basic Usage and make sure it works
