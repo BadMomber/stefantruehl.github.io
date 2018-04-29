@@ -5,7 +5,7 @@ feature-img: "assets/img/post-latexVSCode/VSCodeLatexScreenshot.png"
 tags: [howto, latex]
 ---
 
-Very frequently, I am in contact with students that want to use LaTex for the creation of there academic papers or (bachelor or master) theses and struggle with the setup of a working LaTeX environment. Thus, I want to use this article to give an introduction to the LaTeX environment that I use personally. This article covers the setup of the following tool chain:
+Very frequently, I am in contact by students that want to use LaTex for the creation of there academic papers or (bachelor or master) theses and struggle with the setup of a working LaTeX environment. Thus, I want to use this article to give an introduction to the LaTeX environment that I use personally. This article covers the setup of the following tool chain:
 - **TeX Live** ([link](https://www.tug.org/texlive/ )) - very popular LaTeX distribution that brings along a huge number of LaTeX
 - **Visual Studio Code** (aka VS Code - [link](https://code.visualstudio.com/)) - rather lightweight but very powerful IDE that brings great extendability for a vast variate of different languages. 
 - **LaTex Workshop** ([link](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)) - extension for Visual Studio Code that aims to provide all-in-one features and utilities for LaTeX typesetting (list of features can be found [here](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop))
