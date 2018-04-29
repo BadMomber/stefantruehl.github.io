@@ -1,8 +1,8 @@
 ---
 layout: post
 title: LaTeX Environemnt Setup
-feature-img: "assets/img/sample_feature_img.png"
-tags: [howto]
+feature-img: "assets/img/post-latexVSCode/VSCodeLatexScreenshot.png"
+tags: [howto, latex]
 ---
 
 Very frequently, I am in contact with students that want to use LaTex for the creation of there academic papers or (bachelor or master) theses and struggle with the setup of a working LaTeX environment. Thus, I want to use this article to give an introduction to the LaTeX environment that I use personally. This article covers the setup of the following tool chain:
@@ -30,11 +30,12 @@ It is available for all major operating systems. You will find how tos for insta
 Here is an overview of links to install tutorials per operating system:
 
 #### Linux Setup
-If you are using Linux, it is very likely that you can install Tex Live though you standard package manager. I have checked the following distirbutions, and for them this seems to be true:
+If you are using Linux, it is very likely that you can install Tex Live though you standard package manager. I have checked the following distributions, and for them this seems to be true:
 - Ubuntu: [link](https://packages.ubuntu.com/search?keywords=texlive)
 - Fedora: [link](https://fedoraproject.org/wiki/Features/TeXLive)
     - I use it myself. Even though the link above only refers to a old version, a newer one is available in the Fedora repositories.
 - Arch Linux [link](https://wiki.archlinux.org/index.php/TeX_Live)
+However, according to a co-worker, some distributions ship very old versions of TeX Live. In this case it may be beneficial to install it manually. 
 
 If Tex Live should not be available for your distribution, please review the following two links:
 1. [download links](http://tug.org/texlive/acquire.html)
@@ -93,57 +94,91 @@ Using the console client, the command is:
 ```sh
 git clone git@github.com:stefantruehl/research-proposal-template.git
 ```
+Optional: in order to be able to see later, if the pdf if properly generated, I recommend deleting the *researchproposal.pdf*-file at this point.
 
 #### Step 2: Open the *researchproposal.tex*-file with VS Code
 Follow these steps: 
 1. Open VS Code
-2. Open Folder ("File"->"Open Folder"), browse to the location where you cloned the repo. 
+2. Open Folder ("File"->"Open Folder"), browse to the location where you cloned the repository and open the *research-proposal-template* folder. 
 3. In the explorer section of VS Code's UI open the *researchproposal.tex*-file
 
 
-#### Step 3: Setup proper LaTeX Tool Chain
+#### Step 3: Setup necessary Workspace Build Settings for the Research Proposal
+The research proposal has been set up the way that it requires [Biber](https://en.wikipedia.org/wiki/Biber_(LaTeX)) as bibliography information processing tool. Thus, it is necessary to adjust the build recipe that *LaTeX Workshop* uses to generate a pdf. 
 
-"File"->"Preferences"->"Settings"
+In order to do that, follow these steps (screenshot below): 
+1. Open the settings: "File"->"Preferences"->"Settings"
+2. For the setting *latex-workshop.latex.recipes* add a workspace setting as listed below. 
+3. For the setting *latex-workshop.latex.tools* add a workspace setting as listed below. 
 
+The following is the full content of my workspace settings. 
 ````json
-"latex-workshop.latex.toolchain": [
-  {
-    "command": "pdflatex",
-    "args": [
-      "-synctex=1",
-      "-interaction=nonstopmode",
-      "-file-line-error",
-      "%DOC%"
+{
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex -> biber -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "biber",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
     ]
-  }, {
-    "command": "bibtex",
-    "args": [
-      "%DOCFILE%"
-    ]
-  }, {
-    "command": "pdflatex",
-    "args": [
-      "-synctex=1",
-      "-interaction=nonstopmode",
-      "-file-line-error",
-      "%DOC%"
-    ]
-  }, {
-    "command": "pdflatex",
-    "args": [
-      "-synctex=1",
-      "-interaction=nonstopmode",
-      "-file-line-error",
-      "%DOC%"
-    ]
-  }
-]
+}
+
 ````
 
+![Screenshot of my Workspace settings]({{ site.baseurl }}/assets/img/post-latexVSCode/VSCodeWorkspaceConfiguration.png)
 
 #### Step 4: Build pdf-file
+Once you have added the workspace settings, return to the 
+
+Choose the item "Build LaTeX project (Alt+Ctrl+B)" from the context menu. Now a pdf should be generated. 
 
 
+#### Bonus Point: Open Preview on the Side
+Personally, I use the preview on the side feature as it gives me the ability to see what to document I am editing in in (near) real-time. Screenshot below.
+
+In order to open this, click the "Open Preview to the Side (Ctrl+K V)"-icon on the top right corner of the edit window that shows the *researchproposal.tex*-file.
+
+![Screenshot of my Workspace settings]({{ site.baseurl }}/assets/img/post-latexVSCode/VSCodeLatexScreenshot.png)
 
 
-## Final Step: Basic Usage and make sure it works
