@@ -5,18 +5,18 @@ feature-img: "assets/img/post-latexVSCode/VSCodeLatexScreenshot.png"
 tags: [howto, latex]
 ---
 
-Very frequently, I am in contact by students that want to use LaTex for the creation of there academic papers or (bachelor or master) theses and struggle with the setup of a working LaTeX environment. Thus, I want to use this article to give an introduction to the LaTeX environment that I use personally. This article covers the setup of the following tool chain:
-- **TeX Live** ([link](https://www.tug.org/texlive/ )) - very popular LaTeX distribution that brings along a huge number of LaTeX
-- **Visual Studio Code** (aka VS Code - [link](https://code.visualstudio.com/)) - rather lightweight but very powerful IDE that brings great extendability for a vast variate of different languages. 
-- **LaTex Workshop** ([link](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)) - extension for Visual Studio Code that aims to provide all-in-one features and utilities for LaTeX typesetting (list of features can be found [here](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop))
+Quite frequently, I am contacted by students, that want to use LaTeX for the creation of there academic papers or (bachelor or master) theses, but struggle with the setup of a working LaTeX environment. Thus, I want to use this article to give an introduction to the LaTeX environment that I use personally. This article covers the setup of the following tool chain:
+- **TeX Live** ([link](https://www.tug.org/texlive/ ) - version installed on my machine: TeX Live 2016) - very popular LaTeX distribution that brings along a huge number of packages.
+- **Visual Studio Code** (aka VS Code - [link](https://code.visualstudio.com/) - version installed on my machine: 1.22.2) - rather lightweight but very powerful IDE that brings great extendability for a vast variate of different languages. 
+- **LaTeX Workshop** ([link](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) - version installed on my machine: 5.3.1) - extension for Visual Studio Code that aims to provide all-in-one features and utilities for LaTeX typesetting (list of features can be found [here](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)).
 
 Please understand, if you have a running environment that makes sense to you - stick with it! It is by no means necessary to use the one poposed here, if you should be in one of my classes. Further, there are probably better environments out there. 
 
-However, I personally find this setup highly usable and efficient. This is due to the points that:
-1. it is available for all major operating systems
-2. it is light weight
+However, I personally find this setup highly usable and efficient. This is due to the points that it is: 
+1. available for all major operating systems
+2. light weight
 3. easy to use
-4. it is fully open source
+4. fully open source
 5. works for me...
 
 If you want to give it a shoot, here is how to set it up:
@@ -27,6 +27,11 @@ The [project's website](https://www.tug.org/texlive/ "TeX Live Website") describ
 
 It is available for all major operating systems. You will find how tos for installing it on your machine on the [project's website](https://www.tug.org/texlive/ "TeX Live Website").
 
+#### Remark: Different Versions Available? Go Full! 
+Depending on your operating system, TeX Live may be available in different versions, each bringing a different set of packages. I would recommend to go for a full installation, as this will prevent any trouble with missing packages later. 
+As an example, for Fedora 27, the full installation package is called *texlive-scheme-full* and is available for installation from the standard repositories by using *dnf*. For Ubuntu the package's name seems to be *texlive-full* according to [this](https://packages.ubuntu.com/search?keywords=texlive). For Windows the installer will ask for the kind of installation it is supposed to do. 
+
+
 Here is an overview of links to install tutorials per operating system:
 
 #### Linux Setup
@@ -35,7 +40,7 @@ If you are using Linux, it is very likely that you can install Tex Live though y
 - Fedora: [link](https://fedoraproject.org/wiki/Features/TeXLive)
     - I use it myself. Even though the link above only refers to a old version, a newer one is available in the Fedora repositories.
 - Arch Linux [link](https://wiki.archlinux.org/index.php/TeX_Live)
-However, according to a co-worker, some distributions ship very old versions of TeX Live. In this case it may be beneficial to install it manually. 
+However, according to a co-worker, some distributions ship very old versions of TeX Live e.g. Fedora brings Te Live 2016 even though the 2018 version is available at the time of writing). In this case it may be beneficial to install it manually (However, so far, I have not had any issues with the old version, yet).
 
 If Tex Live should not be available for your distribution, please review the following two links:
 1. [download links](http://tug.org/texlive/acquire.html)
@@ -55,11 +60,6 @@ An installation manual can be found: [here](http://www.tug.org/mactex/mactex-dow
 (Please understand, I have never used MacOS and don't have/don't want access to a machine running it. Thus, I have not tested it :D)
 
 
-#### Different Versions? Go Full! 
-
-Depending on your operating system, TeX Live may be available in different versions, each bringing a different set of packages. I would recommend to go for a full installation, as this will prevent any trouble with missing packages later. 
-As an example, for Fedora 27, the full installation package is called *texlive-scheme-full* and is available for installation from the standard repositories by using *dnf*. For Ubuntu the package's name seems to be *texlive-full* according to [this](https://packages.ubuntu.com/search?keywords=texlive). For Windows the installer will ask for the kind of installation it is supposed to do. 
-
 
 ## Step 2: Install Visual Studio Code
 [Visual Studio Code](https://code.visualstudio.com/) is a light weight IDE developed by Microsoft that is [open source](https://github.com/Microsoft/vscode). It offers great ability to be extended with new functionality though a extension system. Still it remains easy to use and lean. 
@@ -76,11 +76,11 @@ If you want to get familiar with VS Code, the following will give you an introdu
 ## Step 3: Install the VS Code extension: "LaTeX Workshop"
 In order to be able to edit LaTeX with VS Code, you need to install an extension. The one I use and recommend is called [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop "LaTeX Workshop - Visual Studio Marketplace").
 
-On all operating systems, it is installed by simply: 
+The installing procedure is the same on all operating systems. Simply follow these steps:  
 1. launch VS Code Quick Open (ctrl/cmd + P)
 2. paste the following command: "ext install James-Yu.latex-workshop"
 3. hit enter
-4. after the installation, it is most probably necessary to restart VS Code
+4. after the installation, it is most probably necessary to restart VS Code (I know... Microsoft...)
 
 At this point you are probably all set and can create LaTeX documents with your machine. However, if you want to verify that everything is set up properly, you may want to execute the following step es well. 
 
@@ -89,7 +89,7 @@ At this point you are probably all set and can create LaTeX documents with your 
 In order to verify, that everything is set up properly, I recommend using the [research proposal template](https://github.com/stefantruehl/research-proposal-template) that I host on my GitHub account. 
 
 #### Step 1: Clone the repo on to your local machine
-Use the git client of your choosing to clone the repo locally.
+Use the git client of your choosing to clone the repository locally.
 Using the console client, the command is:
 ```sh
 git clone git@github.com:stefantruehl/research-proposal-template.git
@@ -169,13 +169,15 @@ The following is the full content of my workspace settings.
 ![Screenshot of my Workspace settings]({{ site.baseurl }}/assets/img/post-latexVSCode/VSCodeWorkspaceConfiguration.png)
 
 #### Step 4: Build pdf-file
-Once you have added the workspace settings, return to the 
+Once you have added the workspace settings, return to the editing view of the *researchproposal.tex*-file.
 
 Choose the item "Build LaTeX project (Alt+Ctrl+B)" from the context menu. Now a pdf should be generated. 
 
+If so, congrats you got it running. Enjoy!
+
 
 #### Bonus Point: Open Preview on the Side
-Personally, I use the preview on the side feature as it gives me the ability to see what to document I am editing in in (near) real-time. Screenshot below.
+Personally, I use the preview on the side feature as it gives me the ability to see what to document I am editing in in (semi) real-time. Screenshot below.
 
 In order to open this, click the "Open Preview to the Side (Ctrl+K V)"-icon on the top right corner of the edit window that shows the *researchproposal.tex*-file.
 
