@@ -21,11 +21,74 @@ For the remainder of this article, I assume you have a working setup of the tool
 
 
 ## Step 1: Clone Thesis Template
-
-
-
+Use the git client of your choosing to clone the repository locally.
+Using the console client, the command is:
+```sh
+git clone git@github.com:mbredel/thesis-template.git
+```
 ## Step 2: Configure VS Code
+The thesis-template repository brings along a make file for pdf generation. Although I managed to run it from VS Code, I did not get SyncTex to work properly. 
+
+When viewing a tex-file and the pdf-file side-by-side in VS Code, SyncTex allows you to jump to a specific place in the pdf by clicking in the tex file (and the other way around). This is a very handy feature, especially when dealing with long documents (such as a thesis). For further information on this, please review the [Visual Studio Code LaTeX Workshop Extension documentation](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop).
+
+Due to these limitations, I recommend the standard LaTeX Workshop Extension's way of generating a document instead of the make file. In order to do that, first open VS Code and change the workspace configuration to the following. This is done the same way as I already described in my previous article. Thus, no further explanation should be necessary.
+````json
+{
+    "latex-workshop.latex.recipes": [
+        
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ]
+}
+
+## Step 3 (optional but recommended): Develop your Thesis in your own Repository
 
 
-## Step 3: Write your Thesis and have fun
+
+## Step 4: Write your Thesis and have fun
+
 
