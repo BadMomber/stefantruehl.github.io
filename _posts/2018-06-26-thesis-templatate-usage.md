@@ -84,11 +84,28 @@ Due to these limitations, I recommend the standard LaTeX Workshop Extension's wa
         }
     ]
 }
+````
+Once you have added the workspace settings, return to the editing view of the *thesis.tex*-file.
+Choose the item "Build LaTeX project (Alt+Ctrl+B)" from the context menu. Now a pdf should be generated properly without errors. 
 
-## Step 3 (optional but recommended): Develop your Thesis in your own Repository
+This is the way I recommend to create the pdf during thesis writing. Once your are done and want to create the final version that you hand in and print, I strongly encourage you to use the make file with the publish parameter, as it will embed all fonts.
+```sh
+make publish 
+```
 
+## Step 3: Develop your Thesis in your own Remote Repository (optional but strongly recommended)
+I strongly encourage you to develop your thesis in your own Git repository. Besides having a backup, this also gives you the possibility revert any changes you may accidentally have made in the middle of the night and regret in the morning ;-). 
 
+In order to get your own remote Git repository you can choose between a lot of options. The most obvious one are [GitHub}(https://github.com/) (please keep in mind this ist most likely public) or [GitLab](https://about.gitlab.com/). However, if you are a student of the [University of Applied Sciences Darmstadt](https://h-da.de/) you can also choose our own GitLab server [code.fbi.h-da.de](https://code.fbi.h-da.de/).
 
-## Step 4: Write your Thesis and have fun
+In any case, once you have your own remote Git repository you can push the thesis-template repository that you cloned in step 1 to your own repository by executing the following steps. 
+```sh
+cd existing_repo_where_you_cloned_the_thesis_template_repo
+git remote rename origin old-origin
+git remote add origin <address of your own repository>
+git push -u origin --all
+git push -u origin --tags
+```
+
 
 
