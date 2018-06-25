@@ -7,8 +7,7 @@ tags: [how-to, latex]
 
 At our [CS department](https://www.fbi.h-da.de/fbi.html) at [University of Applied Sciences Darmstadt](https://h-da.de/) we recommend a specific LaTeX template to your students, for the creation of Bachelor's and Master's theses. This template can be found [here](https://github.com/mbredel/thesis-template).
 
-In this article I want do describe how to work with the thesis template in the Latex environnement that I proposed in my previous [article](https://stefantruehl.github.io/2018/04/30/latexEnvSetup.html).
-
+In this article I want do describe how to work with the thesis template in the Latex environnement that I proposed in my previous [article](https://stefantruehl.github.io/2018/04/30/latexEnvSetup.html) (TeX Live, Visual Studio Code, and LaTeX Workshop).
 
 ## Introduction 
 In a previous post I have described how to setup a LaTeX environment based on the following tool stack: 
