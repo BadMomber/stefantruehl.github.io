@@ -2,7 +2,7 @@
 layout: post
 title: LaTeX Environemnt Setup
 feature-img: "assets/img/post-latexVSCode/VSCodeLatexScreenshot.png"
-tags: [howto, latex]
+tags: [how-to, latex]
 ---
 
 Quite frequently, I am contacted by students, that want to use LaTeX for the creation of there academic papers or (bachelor or master) theses, but struggle with the setup of a working LaTeX environment. Thus, I want to use this article to give an introduction to the LaTeX environment that I use personally. This article covers the setup of the following tool chain:
