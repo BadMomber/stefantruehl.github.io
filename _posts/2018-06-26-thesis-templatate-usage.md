@@ -5,9 +5,9 @@ feature-img: "assets/img/post-thesis-template-VSCode/ThesisTeplate-VSCode.png"
 tags: [how-to, latex]
 ---
 
-At our [CS department](https://www.fbi.h-da.de/fbi.html) at [University of Applied Sciences Darmstadt](https://h-da.de/) we recommend a specific LaTeX template to your students, for the creation of Bachelor's and Master's theses. This template can be found [here](https://github.com/mbredel/thesis-template).
+Our [CS department](https://www.fbi.h-da.de/fbi.html) (of [University of Applied Sciences Darmstadt](https://h-da.de/)) offers a LaTeX template to our students, that they can use to create Bachelor's and Master's theses. This template can be found [here](https://github.com/mbredel/thesis-template).
 
-In this article I want do describe how to work with the thesis template in the Latex environnement that I proposed in my previous [article](https://stefantruehl.github.io/2018/04/30/latexEnvSetup.html) (TeX Live, Visual Studio Code, and LaTeX Workshop).
+In this article I want do describe how to work with the thesis template in the Latex environnement that I proposed in my previous [article](https://stefantruehl.github.io/2018/04/30/latexEnvSetup.html) (used tools: TeX Live, Visual Studio Code, and LaTeX Workshop).
 
 ## Introduction 
 In a previous post I have described how to setup a LaTeX environment based on the following tool stack: 
@@ -19,7 +19,7 @@ For reasons why I consider this stack to be very useful and a description on how
 For the remainder of this article, I assume you have a working setup of the tool chain, according to the [article](https://stefantruehl.github.io/2018/04/30/latexEnvSetup.html).
 
 
-## Step 1: Clone Thesis Template
+## Step 1: Clone the Thesis-Template
 Use the git client of your choosing to clone the repository locally.
 Using the console client, the command is:
 ```sh
@@ -28,7 +28,7 @@ git clone git@github.com:mbredel/thesis-template.git
 ## Step 2: Configure VS Code
 The thesis-template repository brings along a make file for pdf generation. Although I managed to run it from VS Code, I did not get SyncTex to work properly. 
 
-When viewing a tex-file and the pdf-file side-by-side in VS Code, SyncTex allows you to jump to a specific place in the pdf by clicking in the tex file (and the other way around). This is a very handy feature, especially when dealing with long documents (such as a thesis). For further information on this, please review the [Visual Studio Code LaTeX Workshop Extension documentation](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop).
+When viewing a tex-file and a pdf-file side-by-side in VS Code, SyncTex allows you to jump to a specific place in the pdf by clicking in the tex file (and the other way around). This is a very handy feature, especially when dealing with long documents (such as a thesis). For further information on this, please review the [Visual Studio Code LaTeX Workshop Extension documentation](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop).
 
 Due to these limitations, I recommend the standard LaTeX Workshop Extension's way of generating a document instead of the make file. In order to do that, first open VS Code and change the workspace configuration to the following. This is done the same way as I already described in my previous article. Thus, no further explanation should be necessary.
 ````json
